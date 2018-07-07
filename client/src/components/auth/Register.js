@@ -61,7 +61,8 @@ class Register extends Component {
     const uploadPreset = process.env.REACT_APP_UPLOAD_PRESET;
     const cloudName = process.env.REACT_APP_CLOUD_NAME;
 
-    const url = "https://api.cloudinary.com/v1_1/dqej6sbaj/image/upload";
+    const url =
+      "https://api.cloudinary.com/v1_1/" + cloudName + "/image/upload";
 
     const formData = new FormData();
     formData.append("file", uploadedFile);
