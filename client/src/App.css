@@ -43,3 +43,6 @@ img {
 .form-control::placeholder {
   color: #bbb !important;
 }
+.footy {
+  margin-bottom: 0;
+}

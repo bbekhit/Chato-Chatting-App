@@ -1,50 +1,3 @@
-// const express = require("express");
-// const router = express.Router();
-// const passport = require("passport");
-
-// // route   GET api/posts/test
-// // desc    tests posts route
-// // acess   public route
-// router.get("/test", (req, res) =>
-//   res.json({
-//     msg: "posts worked"
-//   })
-// );
-
-// router.post(
-//   "/post",
-//   passport.authenticate("jwt", { session: false }),
-//   (req, res) => {
-//     Profile.findOne({ user: req.user.id }).then(profile => {
-//       const newPost = {
-//         text: req.body.text
-//       };
-//       newPost.save().then(post => res.json(post));
-//     });
-//   }
-// );
-
-// router.delete("/post/:id", (req, res) => {
-//   Post.findOne({ _id: req.params.id }).then(post => {
-//     if (post.user.toString() !== req.params.id) {
-//       return res.status(401).json;
-//     }
-//     Post.remove().then(() => {
-//       success: true;
-//     });
-//   });
-// });
-
-// router.post("/post", (req, res) => {
-//   Profile.findOne({ user: req.user.id }).then(profile => {
-//     const newPost = {
-//       title: req.body.title
-//     };
-//     newPost.save().then(post => res.json(post));
-//   });
-// });
-
-// module.exports = router;
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
@@ -209,7 +162,7 @@ router.post(
         const newComment = {
           text: req.body.text,
           name: req.body.name,
-          avatar: req.body.avatar,
+          image: req.body.image,
           user: req.user.id
         };
 
@@ -254,6 +207,29 @@ router.delete(
         post.save().then(post => res.json(post));
       })
       .catch(err => res.status(404).json({ postnotfound: "No post found" }));
+  }
+);
+
+router.put(
+  "/post/:id/edit",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    const post = req.body;
+    const query = { _id: req.params.id };
+    // if the field doesn't exist $set will set a new field
+    const update = {
+      $set: {
+        text: post.text
+      }
+    };
+    // When true returns the updated document
+    const options = { new: true };
+
+    Post.findOneAndUpdate(query, update, options)
+      .then(post => res.json(post))
+      .catch(err =>
+        res.status(404).json({ nopostfound: "no post with this ID" })
+      );
   }
 );
 

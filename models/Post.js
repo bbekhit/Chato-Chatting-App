@@ -35,7 +35,12 @@ const PostSchema = new Schema({
         type: String,
         required: true
       },
-
+      name: {
+        type: String
+      },
+      image: {
+        type: String
+      },
       date: {
         type: Date,
         default: Date.now
@@ -49,3 +54,4 @@ const PostSchema = new Schema({
 });
 
 module.exports = Post = mongoose.model("post", PostSchema);
+
