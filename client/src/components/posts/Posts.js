@@ -7,6 +7,7 @@ import Spinner from "../common/Spinner";
 import { getPosts } from "../../actions/postActions";
 import { setTextFilter } from "../../actions/filtersActions";
 import selector from "../../select/select";
+import classes from "../../styles/Posts.css";
 
 class Posts extends Component {
   componentDidMount() {
@@ -30,22 +31,31 @@ class Posts extends Component {
       ));
     }
     return (
-      <div className="feed">
+      <div className={classes.feed}>
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <PostForm />
-              <input
-                type="text"
-                placeholder="Search Posts"
-                className="mb-3"
-                value={this.props.filters.text}
-                onChange={this.onSearchTextChange}
-              />
-              {postContent}
-            </div>
-          </div>
-        </div>
+              <div>
+                <div className="input-group mb-3">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text">
+                      <i className="fa fa-search m-2" />
+                    </span>{" "}
+                  </div>{" "}
+                  <input
+                    type="text"
+                    className="p-3"
+                    placeholder="Search Posts by author name"
+                    value={this.props.filters.text}
+                    onChange={this.onSearchTextChange}
+                  />{" "}
+                </div>{" "}
+              </div>{" "}
+              {postContent}{" "}
+            </div>{" "}
+          </div>{" "}
+        </div>{" "}
       </div>
     );
   }
@@ -64,5 +74,8 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getPosts, setTextFilter }
+  {
+    getPosts,
+    setTextFilter
+  }
 )(Posts);

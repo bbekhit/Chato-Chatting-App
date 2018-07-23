@@ -1,9 +1,10 @@
 import React from "react";
+import classes from "../../styles/Landing.css";
 
 const Landing = () => {
   return (
     <div>
-      <div className="landing">
+      <div className={classes.landing}>
         <div className="dark-overlay landing-inner text-light">
           <div className="container">
             <div className="row">

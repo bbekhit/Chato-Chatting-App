@@ -5,6 +5,7 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { registerUser } from "../../actions/authActions";
+import classes from "../../styles/Register.css";
 
 class Register extends Component {
   constructor() {
@@ -87,91 +88,132 @@ class Register extends Component {
     const { errors } = this.state;
     return (
       <div>
-        <div className="register">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-6 mx-auto h-25 formy">
+        <div className={classes.register}>
+          <div className="container-fluid px-5">
+            <div className="row align-items-center text-center">
+              <div className={`${classes.formo} col-md-6`}>
                 <h1 className="display-4 text-center">Sign Up</h1>
                 <div className="mb-2">
-                  <input type="file" onChange={this.fileUploadHandler} />
+                  <input
+                    type="file"
+                    onChange={this.fileUploadHandler}
+                    style={{ color: "white" }}
+                  />
                   <button
-                    className="btn btn-info btn-sm mt-1"
+                    className="btn btn-outline-light text-uppercase"
                     onClick={this.onImageUpload}
                   >
                     upload avatar
                   </button>
                 </div>
                 {this.state.image && (
-                  <alert className="alert-success alert-md">
+                  <alert className="alert-success alert-md p-1">
                     Image uploaded successfuly{" "}
                   </alert>
                 )}
                 <form noValidate onSubmit={this.onSubmit}>
                   <div className="form-group">
-                    <input
-                      type="text"
-                      className={classnames("form-control form-control-lg", {
-                        "is-invalid": errors.name
-                      })}
-                      placeholder="Name"
-                      name="name"
-                      value={this.state.name}
-                      onChange={this.onChange}
-                    />
-                    {errors.name && (
-                      <div className="invalid-feedback">{errors.name}</div>
-                    )}
+                    <div className="input-group mb-3">
+                      <div className="input-group-prepend">
+                        <span className="input-group-text">
+                          <i className="fa fa-user m-2" />
+                        </span>
+                      </div>
+                      <input
+                        type="text"
+                        className={classnames("form-control form-control-lg", {
+                          "is-invalid": errors.name
+                        })}
+                        placeholder="Name"
+                        name="name"
+                        value={this.state.name}
+                        onChange={this.onChange}
+                      />
+                      {errors.name && (
+                        <div className="invalid-feedback">{errors.name}</div>
+                      )}
+                    </div>
                   </div>
                   <div className="form-group">
-                    <input
-                      type="email"
-                      className={classnames("form-control form-control-lg", {
-                        "is-invalid": errors.email
-                      })}
-                      placeholder="Email Address"
-                      name="email"
-                      value={this.state.email}
-                      onChange={this.onChange}
-                    />
-                    {errors.email && (
-                      <div className="invalid-feedback">{errors.email}</div>
-                    )}
+                    <div className="input-group mb-3">
+                      <div className="input-group-prepend">
+                        <span className="classes.icono input-group-text">
+                          <i className="fa fa-envelope m-2" />
+                        </span>
+                      </div>
+                      <input
+                        type="email"
+                        className={classnames("form-control form-control-lg", {
+                          "is-invalid": errors.email
+                        })}
+                        placeholder="Email Address"
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.onChange}
+                      />
+                      {errors.email && (
+                        <div className="invalid-feedback">{errors.email}</div>
+                      )}
+                    </div>
                   </div>
                   <div className="form-group">
-                    <input
-                      type="password"
-                      className={classnames("form-control form-control-lg", {
-                        "is-invalid": errors.password
-                      })}
-                      placeholder="Password"
-                      name="password"
-                      value={this.state.password}
-                      onChange={this.onChange}
-                    />
-                    {errors.password && (
-                      <div className="invalid-feedback">{errors.password}</div>
-                    )}
+                    <div className="input-group mb-3">
+                      <div className="input-group-prepend">
+                        <span className="input-group-text">
+                          <i className="fa fa-lock m-2" />
+                        </span>
+                      </div>
+                      <input
+                        type="password"
+                        className={classnames("form-control form-control-lg", {
+                          "is-invalid": errors.password
+                        })}
+                        placeholder="Password"
+                        name="password"
+                        value={this.state.password}
+                        onChange={this.onChange}
+                      />
+                      {errors.password && (
+                        <div className="invalid-feedback">
+                          {errors.password}
+                        </div>
+                      )}
+                    </div>
                   </div>
                   <div className="form-group">
-                    <input
-                      type="password"
-                      className={classnames("form-control form-control-lg", {
-                        "is-invalid": errors.password2
-                      })}
-                      placeholder="Confirm Password"
-                      name="password2"
-                      value={this.state.password2}
-                      onChange={this.onChange}
-                    />
-                    {errors.password2 && (
-                      <div className="invalid-feedback">{errors.password2}</div>
-                    )}
+                    <div className="input-group mb-3">
+                      <div className="input-group-prepend">
+                        <span className="input-group-text">
+                          <i className="fa fa-lock m-2" />
+                        </span>
+                      </div>
+                      <input
+                        type="password"
+                        className={classnames("form-control form-control-lg", {
+                          "is-invalid": errors.password2
+                        })}
+                        placeholder="Confirm Password"
+                        name="password2"
+                        value={this.state.password2}
+                        onChange={this.onChange}
+                      />
+                      {errors.password2 && (
+                        <div className="invalid-feedback">
+                          {errors.password2}
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  <input
-                    type="submit"
-                    className="btn btn-info btn-block mt-4"
-                  />
+                  <button className="btn btn-block btn-lg btn-outline-light text-uppercase primary-color">
+                    <i className="far fa-hand-point-right mr-2" /> Submit
+                  </button>
                 </form>
+              </div>
+              <div className="col-md-6 ml-auto">
+                <p className="lead w-75 mx-auto text-dark">
+                  Create an account and start chatting to everybody around the
+                  world
+                </p>
               </div>
             </div>
           </div>

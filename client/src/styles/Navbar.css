@@ -1,0 +1,16 @@
+.navo {
+  background-color: #ffff1a;
+}
+
+.linko {
+  color: #1a1a00;
+  border: 1px solid #1a1a00;
+  margin-right: 20px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.linko:hover {
+  color: #ffff1a;
+  background-color: black;
+}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import Logo from "../../img/warbler-logo.png";
+import classes from "../../styles/Navbar.css";
 
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
@@ -19,7 +20,7 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link mr-3" to="/feed">
+          <Link className={`${classes.linko} nav-link mr-4`} to="/feed">
             Posts Feed
           </Link>
         </li>
@@ -29,9 +30,13 @@ class Navbar extends Component {
             src={user.image}
             alt={user.name}
             style={{ width: "50px" }}
-            title="You must have a Gravatar connected to your email to display an image"
           />
-          <a href="" onClick={this.onLogout}>
+          <a
+            href=""
+            onClick={this.onLogout}
+            className={classes.linko}
+            style={{ padding: "12px", textDecoration: "none" }}
+          >
             Logout
           </a>
         </li>
@@ -41,12 +46,12 @@ class Navbar extends Component {
     const guestLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link" to="/register">
+          <Link className={`${classes.linko} nav-link`} to="/register">
             Sign Up
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/login">
+          <Link className={`${classes.linko} nav-link`} to="/login">
             Login
           </Link>
         </li>
@@ -54,10 +59,14 @@ class Navbar extends Component {
     );
     return (
       <div>
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+        <nav className={`${classes.navo} navbar navbar-expand-sm mb-4`}>
           <div className="container">
             <div className="navbar-header">
-              <Link to="/" className="navbar-brand">
+              <Link
+                to="/"
+                className="navbar-brand"
+                style={{ color: "#1a1a00" }}
+              >
                 <img
                   src={Logo}
                   alt="bird"

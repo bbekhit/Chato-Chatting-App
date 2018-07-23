@@ -17,7 +17,7 @@ class CommentItem extends Component {
           <div className="col-md-2">
             <div>
               <img
-                className="rounded-circle d-none d-md-block"
+                className="rounded-circle img-fluid d-none d-md-block"
                 src={comment.image}
                 alt="avatar"
               />
@@ -28,13 +28,17 @@ class CommentItem extends Component {
           <div className="col-md-10">
             <p className="lead">{comment.text}</p>
             {comment.user === auth.user.id ? (
-              <button
+              <i
                 onClick={this.onDeleteClick.bind(this, postId, comment._id)}
-                type="button"
-                className="btn btn-danger mr-1"
-              >
-                <i className="fas fa-times" />
-              </button>
+                className="fas fa-times float-right"
+                style={{
+                  border: "1px solid red",
+                  borderRadius: "50%",
+                  padding: "12px",
+                  color: "red",
+                  cursor: "pointer"
+                }}
+              />
             ) : null}
           </div>
         </div>

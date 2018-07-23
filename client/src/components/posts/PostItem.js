@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import classnames from "classnames";
 import { Link } from "react-router-dom";
 import { deletePost, addLike, removeLike } from "../../actions/postActions";
+import classes from "../../styles/PostItem.css";
 
 class PostItem extends Component {
   onDeleteClick(id) {
@@ -31,14 +32,15 @@ class PostItem extends Component {
     const { post, auth, showActions } = this.props;
 
     return (
-      <div className="card card-body mb-3">
+      <div className="card card-body m-5">
         <div className="row">
           <div className="col-md-2">
             <div>
               <img
-                className="rounded-circle d-none d-md-block"
+                className="img-fluid rounded-circle d-none d-md-block"
                 src={post.image}
                 alt=""
+                style={{ marginTop: "-75px", border: "3px solid yellow" }}
               />
             </div>
             <br />
@@ -67,7 +69,10 @@ class PostItem extends Component {
                 >
                   <i className="text-secondary fas fa-thumbs-down" />
                 </button>
-                <Link to={`/post/${post._id}`} className="btn btn-info mr-1">
+                <Link
+                  to={`/post/${post._id}`}
+                  className={`${classes.linko} btn mr-1`}
+                >
                   Comments
                 </Link>
                 {post.user === auth.user.id ? (
@@ -86,7 +91,7 @@ class PostItem extends Component {
 
                     <Link
                       to={`/${post._id}/edit`}
-                      styly={{
+                      style={{
                         textDecoration: "none"
                       }}
                     >

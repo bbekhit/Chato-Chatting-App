@@ -1,9 +1,9 @@
 import React from "react";
-
+import classes from "../../styles/Footer.css";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-dark text-white mt-5 p-4 text-center footy">
+      <footer className={`${classes.footy} mt-5 p-4 text-center`}>
         Copyright &copy; {new Date().getFullYear()}
       </footer>
     </div>

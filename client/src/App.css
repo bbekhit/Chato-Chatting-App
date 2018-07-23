@@ -1,4 +1,8 @@
-img {
+body {
+  font-family: "Merienda", cursive;
+}
+
+/* img {
   width: 100%;
 }
 
@@ -45,4 +49,4 @@ img {
 }
 .footy {
   margin-bottom: 0;
-}
+} */

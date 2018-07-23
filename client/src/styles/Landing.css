@@ -1,0 +1,10 @@
+.landing {
+  position: relative;
+  background: url("../img/signed-out-home.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  margin-top: -45px;
+  margin-bottom: -85px;
+  font-size: 25px;
+}

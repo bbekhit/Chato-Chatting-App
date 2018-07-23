@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import classnames from "classnames";
 import { loginUser } from "../../actions/authActions";
+import classes from "../../styles/Login.css";
 
 class Login extends Component {
   constructor() {
@@ -52,10 +53,10 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="login">
+      <div className={classes.login}>
         <div className="container">
           <div className="row">
-            <div className="col-md-8 m-auto formy">
+            <div className={`${classes.formo} col-md-6`}>
               <h1 className="display-4 text-center">Log In</h1>
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">
@@ -88,7 +89,9 @@ class Login extends Component {
                     <div className="invalid-feedback">{errors.password}</div>
                   )}
                 </div>
-                <input type="submit" className="btn btn-info btn-block mt-4" />
+                <button className="btn btn-block btn-lg btn-outline-light text-uppercase">
+                  <i className="far fa-hand-point-right mr-2" /> Login
+                </button>
               </form>
             </div>
           </div>
