@@ -103,7 +103,7 @@ class Register extends Component {
                     className="btn btn-outline-light text-uppercase"
                     onClick={this.onImageUpload}
                   >
-                    upload avatar
+                    Add avatar
                   </button>
                 </div>
                 {this.state.image && (
