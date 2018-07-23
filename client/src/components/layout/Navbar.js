@@ -29,13 +29,13 @@ class Navbar extends Component {
             className="rounded-circle mr-2"
             src={user.image}
             alt={user.name}
-            style={{ width: "50px" }}
+            style={{ width: "70px", height: "70px" }}
           />
           <a
             href=""
             onClick={this.onLogout}
             className={classes.linko}
-            style={{ padding: "12px", textDecoration: "none" }}
+            style={{ padding: "8px", textDecoration: "none" }}
           >
             Logout
           </a>
