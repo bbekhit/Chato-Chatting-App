@@ -20,21 +20,23 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className={`${classes.linko} nav-link mr-4`} to="/feed">
+          <Link className={`${classes.linko} nav-link mr-3`} to="/feed">
             Posts Feed
           </Link>
         </li>
         <li className="nav-item">
           <img
-            className="rounded-circle mr-2"
+            className="rounded-circle mr-1"
             src={user.image}
             alt={user.name}
             style={{ width: "70px", height: "70px" }}
           />
+        </li>
+        <li className="nav-item">
           <a
             href=""
             onClick={this.onLogout}
-            className={classes.linko}
+            className={`${classes.linko} nav-link`}
             style={{ padding: "8px", textDecoration: "none" }}
           >
             Logout

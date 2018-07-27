@@ -6,12 +6,20 @@
   margin: 250px auto 200px;
 }
 
-.login {
-  position: relative;
+/* .login {
   background: url("../img/warbler-hero.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
   margin-top: -45px;
   margin-bottom: -85px;
   font-size: 25px;
+} */
+
+.login {
+  background: url("../img/warbler-hero.jpg") fixed no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  margin-top: -25px;
+  margin-bottom: -65px;
 }

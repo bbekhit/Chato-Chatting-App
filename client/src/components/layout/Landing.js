@@ -5,7 +5,7 @@ const Landing = () => {
   return (
     <div>
       <div className={classes.landing}>
-        <div className="dark-overlay landing-inner text-light">
+        <div className=" text-light">
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center" />

@@ -1,10 +1,20 @@
 .landing {
   position: relative;
-  background: url("../img/signed-out-home.jpg") no-repeat;
+  background: url("../img/signed-out-home.jpg") fixed no-repeat;
   background-size: cover;
   background-position: center center;
   height: 100vh;
-  margin-top: -45px;
-  margin-bottom: -85px;
+  margin-top: -25px;
+  margin-bottom: -65px;
   font-size: 25px;
 }
+/* .landing {
+  background: url("../img/signed-out-home.jpg") center/cover fixed no-repeat;
+  height: 100%;
+} */
+
+/* .landing {
+  background: url("../img/signed-out-home.jpg") fixed no-repeat;
+  background-size: cover;
+  background-position: center center;
+} */
