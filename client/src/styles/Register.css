@@ -6,16 +6,6 @@
   margin: 100px auto;
 }
 
-/* .register {
-  position: relative;
-  background: url("../img/warbler-hero.jpg") no-repeat;
-  background-size: cover;
-  background-position: center center;
-  margin-top: -45px;
-  margin-bottom: -85px;
-  font-size: 25px;
-} */
-
 .register {
   background: url("../img/warbler-hero.jpg") fixed no-repeat;
   background-size: cover;

@@ -1,9 +1,8 @@
 .feed {
-  background: url("../img/signed-out-home.jpg") no-repeat fixed;
+  background: url("../img/signed-out-home.jpg") fixed no-repeat;
   background-size: cover;
   background-position: center center;
-  margin-top: -45px;
-  margin-bottom: -85px;
-  font-size: 25px;
-  padding: 25px;
+  height: 100%;
+  margin-top: -25px;
+  margin-bottom: -65px;
 }

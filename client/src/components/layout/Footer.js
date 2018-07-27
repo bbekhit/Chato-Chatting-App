@@ -3,9 +3,7 @@ import classes from "../../styles/Footer.css";
 const Footer = () => {
   return (
     <div>
-      <footer
-        className={`${classes.footy} mt-5 p-4 text-center navbar-fixed-bottom`}
-      >
+      <footer className={`${classes.footy} p-4 text-center mt-5`}>
         Copyright &copy; {new Date().getFullYear()}
       </footer>
     </div>

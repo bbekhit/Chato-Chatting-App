@@ -47,7 +47,7 @@ class CommentForm extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="post-form my-3">
+      <div className="post-form my-5">
         <div className="card card-info">
           <div className={`${classes["post-form-header"]} card-header`}>
             Your comment here
