@@ -29,7 +29,7 @@ class Navbar extends Component {
             className="rounded-circle mr-1"
             src={user.image}
             alt={user.name}
-            style={{ width: "70px", height: "70px" }}
+            style={{ width: "60px", height: "60px" }}
           />
         </li>
         <li className="nav-item">
