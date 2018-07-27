@@ -36,7 +36,7 @@ class Post extends Component {
             <div className="col-md-12">
               <Link
                 to="/feed"
-                className="btn btn-lg btn-outline-warning text-uppercase"
+                className="btn btn-lg btn-outline-warning text-uppercase my-4"
               >
                 <i className="fa fa-arrow-left mr-2" />
                 Back

@@ -34,10 +34,10 @@ class Posts extends Component {
       <div className={classes.feed}>
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
+            <div className="col-md-12 mt-4">
               <PostForm />
-              <div>
-                <div className="input-group mb-3">
+              <div className="my-3">
+                <div className="input-group">
                   <div className="input-group-prepend">
                     <span className="input-group-text">
                       <i className="fa fa-search m-2" />
@@ -45,8 +45,8 @@ class Posts extends Component {
                   </div>{" "}
                   <input
                     type="text"
-                    className="p-3"
-                    placeholder="Search Posts by author name"
+                    className=""
+                    placeholder=" Search authors"
                     value={this.props.filters.text}
                     onChange={this.onSearchTextChange}
                   />{" "}

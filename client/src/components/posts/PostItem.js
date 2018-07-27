@@ -32,7 +32,7 @@ class PostItem extends Component {
     const { post, auth, showActions } = this.props;
 
     return (
-      <div className="card card-body m-5">
+      <div className="card card-body my-5">
         <div className="row">
           <div className="col-md-2">
             <div>
@@ -40,7 +40,7 @@ class PostItem extends Component {
                 className="img-fluid rounded-circle d-none d-md-block"
                 src={post.image}
                 alt=""
-                style={{ marginTop: "-75px", border: "3px solid yellow" }}
+                style={{ marginTop: "-60px", border: "3px solid yellow" }}
               />
             </div>
             <br />
