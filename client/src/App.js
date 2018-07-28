@@ -5,6 +5,7 @@ import setAuthToken from "./utils/setAuthToken";
 import { Provider } from "react-redux";
 import store from "./store";
 import "./App.css";
+import PrivateRoute from "./components/common/PrivateRoute";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Landing from "./components/layout/Landing";
@@ -48,11 +49,10 @@ class App extends Component {
               <Route exact path="/" component={Landing} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
-              <Route exact path="/feed" component={Posts} />
-              <Route exact path="/post/:id" component={Post} />
-              <Route exact path="/:id/edit" component={UpdatePostForm} />
+              <PrivateRoute exact path="/feed" component={Posts} />
+              <PrivateRoute exact path="/post/:id" component={Post} />
+              <PrivateRoute exact path="/:id/edit" component={UpdatePostForm} />
             </Switch>
-            <Footer />
           </div>
         </BrowserRouter>
       </Provider>

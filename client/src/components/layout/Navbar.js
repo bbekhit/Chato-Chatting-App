@@ -46,7 +46,7 @@ class Navbar extends Component {
     );
 
     const guestLinks = (
-      <ul className="navbar-nav ml-auto">
+      <ul className="navbar-nav fixed ml-auto ">
         <li className="nav-item">
           <Link className={`${classes.linko} nav-link`} to="/register">
             Sign Up
@@ -82,6 +82,7 @@ class Navbar extends Component {
               type="button"
               data-toggle="collapse"
               data-target="#mobile-nav"
+              style={{ color: "black" }}
             >
               <span className="navbar-toggler-icon" />
             </button>
