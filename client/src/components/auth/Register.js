@@ -88,7 +88,7 @@ class Register extends Component {
     const { errors } = this.state;
     return (
       <div>
-        <div className={classes.register}>
+        <div className={`${classes.register} mt-5`}>
           <div className="container-fluid px-5">
             <div className="row align-items-center text-center">
               <div className={`${classes.formo} col-md-6`}>

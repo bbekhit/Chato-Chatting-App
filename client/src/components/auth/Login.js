@@ -53,7 +53,7 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div className={classes.login}>
+      <div className={`${classes.login} mt-5`}>
         <div className="container">
           <div className="row">
             <div className={`${classes.formo} col-md-6`}>

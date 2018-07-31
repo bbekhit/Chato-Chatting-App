@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
 import { updatePost, getPost } from "../../actions/postActions";
 import isEmpty from "../../validation/is-empty";
+import classes from "../../styles/Post.css";
 
 class UpdatePostForm extends Component {
   constructor(props) {
@@ -61,12 +62,12 @@ class UpdatePostForm extends Component {
     const { errors } = this.state;
 
     return (
-      <div>
-        <div className="container-fluid">
+      <div className={`${classes.post} mt-5`}>
+        <div className="container-fluid mt-5">
           <div className="row">
             <div className="col-md-12">
               <div className="post-form m-5">
-                <div className="card card-info">
+                <div className="card card-info" style={{ marginTop: "150px" }}>
                   <div
                     className="card-header  "
                     style={{ background: "#ffff1a" }}

@@ -61,7 +61,9 @@ class Navbar extends Component {
     );
     return (
       <div>
-        <nav className={`${classes.navo} navbar navbar-expand-sm mb-4`}>
+        <nav
+          className={`${classes.navo} navbar navbar-expand-sm mb-5 fixed-top`}
+        >
           <div className="container">
             <div className="navbar-header">
               <Link

@@ -31,10 +31,10 @@ class Posts extends Component {
       ));
     }
     return (
-      <div className={classes.feed}>
+      <div className={`${classes.feed} mt-5`}>
         <div className="container">
           <div className="row">
-            <div className="col-md-12 mt-4">
+            <div className="col-md-12 mt-5">
               <PostForm />
               <div className="my-3">
                 <div className="input-group">

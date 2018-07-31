@@ -1,7 +1,7 @@
 .landing {
-  background: url("../img/signed-out-home.jpg") fixed no-repeat;
+  background: url("../img/bird2.jpg") fixed no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   margin-top: -25px;
 }

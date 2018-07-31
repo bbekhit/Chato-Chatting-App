@@ -8,6 +8,7 @@ import CommentFeed from "./CommentFeed";
 import Spinner from "../common/Spinner";
 import { getPost } from "../../actions/postActions";
 import classes from "../../styles/Post.css";
+
 class Post extends Component {
   componentDidMount() {
     this.props.getPost(this.props.match.params.id);
@@ -30,13 +31,13 @@ class Post extends Component {
     }
 
     return (
-      <div className={classes.post}>
+      <div className={`${classes.post} mt-5`}>
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <Link
                 to="/feed"
-                className="btn btn-lg btn-outline-warning text-uppercase my-4"
+                className="btn btn-lg btn-outline-warning text-uppercase mt-5 mb-3"
               >
                 <i className="fa fa-arrow-left mr-2" />
                 Back

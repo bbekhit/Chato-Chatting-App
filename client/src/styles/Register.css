@@ -7,10 +7,10 @@
 }
 
 .register {
-  background: url("../img/warbler-hero.jpg") fixed no-repeat;
+  background: url("../img/bird1.jpg") fixed no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100%;
+  min-height: 100vh;
   margin-top: -25px;
   margin-bottom: -65px;
 }
