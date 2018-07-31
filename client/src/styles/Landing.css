@@ -1,7 +1,6 @@
 .landing {
   background: url("../img/bird2.jpg") fixed no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   min-height: 100vh;
-  margin-top: -25px;
 }
