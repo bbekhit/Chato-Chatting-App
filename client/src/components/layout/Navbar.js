@@ -9,6 +9,12 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 
 class Navbar extends Component {
+  componentDidMount() {
+    {
+      document.querySelector(".navbar-toggler").innerHTML =
+        '<i class="fa fa-arrow-down fa-2x"></i>';
+    }
+  }
   onLogout = e => {
     e.preventDefault();
     this.props.logoutUser();
@@ -20,23 +26,23 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className={`${classes.linko} nav-link mr-4`} to="/feed">
+          <Link className={`${classes.linko} nav-link mr-4 mt-1`} to="/feed">
             Posts Feed
           </Link>
         </li>
         <li className="nav-item">
           <img
-            className="rounded-circle mr-1"
+            className="rounded-circle mr-1 mt-2"
             src={user.image}
             alt={user.name}
-            style={{ width: "50px", height: "50px" }}
+            style={{ width: "35px", height: "35px" }}
           />
         </li>
         <li className="nav-item">
           <a
             href=""
             onClick={this.onLogout}
-            className={`${classes.linko} nav-link`}
+            className={`${classes.linko} nav-link mt-1`}
             style={{ padding: "8px", textDecoration: "none" }}
           >
             Logout
@@ -48,12 +54,12 @@ class Navbar extends Component {
     const guestLinks = (
       <ul className="navbar-nav fixed ml-auto ">
         <li className="nav-item">
-          <Link className={`${classes.linko} nav-link`} to="/register">
+          <Link className={`${classes.linko} nav-link mt-1`} to="/register">
             Sign Up
           </Link>
         </li>
         <li className="nav-item">
-          <Link className={`${classes.linko} nav-link`} to="/login">
+          <Link className={`${classes.linko} nav-link mt-1`} to="/login">
             Login
           </Link>
         </li>
@@ -80,11 +86,10 @@ class Navbar extends Component {
               </Link>
             </div>
             <button
-              className="navbar-toggler"
+              className={`${classes.togglo} navbar-toggler`}
               type="button"
               data-toggle="collapse"
               data-target="#mobile-nav"
-              style={{ color: "black" }}
             >
               <span className="navbar-toggler-icon" />
             </button>
